@@ -24,6 +24,8 @@
 	},
 	"dependencies": {
 		"@tanstack/react-query": "4.29.19",
+		"exif-js": "^2.3.0",
+		"exifreader": "^4.13.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"react-router-dom": "6.14.1"
@@ -86,18 +88,23 @@
 		"workbox-window": "7.0.0"
 	},
 	"browserslist": {
-		"production": "Edge >= 18, Firefox >= 60, Chrome >= 61, Safari >= 11, Opera >= 48",
+		"production": [
+			"Edge >= 18",
+			"Firefox >= 60",
+			"Chrome >= 61",
+			"Safari >= 11",
+			"Opera >= 48"
+		],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version"
 		]
 	},
 	"lint-staged": {
-		"*": "prettier -uw --cache",
-		"*.css": "stylelint --cache --fix",
-		"*.{ts,tsx}": [
-			"eslint --cache --fix",
-			"vitest related --run --coverage=false"
+		"*.js": [
+			"npm run lint:check",
+			"npm run lint:fix",
+			"npm run prettier:fix"
 		]
 	},
 	"pnpm": {

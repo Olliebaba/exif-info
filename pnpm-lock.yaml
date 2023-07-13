@@ -11,6 +11,12 @@ dependencies:
   '@tanstack/react-query':
     specifier: 4.29.19
     version: 4.29.19(react-dom@18.2.0)(react@18.2.0)
+  exif-js:
+    specifier: ^2.3.0
+    version: 2.3.0
+  exifreader:
+    specifier: ^4.13.0
+    version: 4.13.0
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -2623,6 +2629,13 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
+  /@xmldom/xmldom@0.8.8:
+    resolution: {integrity: sha512-0LNz4EY8B/8xXY86wMrQ4tz6zEHZv9ehFMJPm8u2gq5lQ71cfRKdaKyxfJAx5aUoyzx0qzgURblTisPGgz3d+Q==}
+    engines: {node: '>=10.0.0'}
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /@zxing/text-encoding@0.9.0:
     resolution: {integrity: sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==}
     requiresBuild: true
@@ -4352,6 +4365,17 @@ packages:
     dependencies:
       pify: 2.3.0
     dev: true
+
+  /exif-js@2.3.0:
+    resolution: {integrity: sha512-1Og9pAzG2FZRVlaavH8bB8BTeHcjMdJhKmeQITkX+uLRCD0xPtKAdZ2clZmQdJ56p9adXtJ8+jwrGp/4505lYg==}
+    dev: false
+
+  /exifreader@4.13.0:
+    resolution: {integrity: sha512-IhJBpyXDLbCdgzVHkthadOvrMiZOR2XS7POVp0b5JoVfScRoCJ6YazZ+stTkbDTE5TRTP44bE5RKsujckAs45Q==}
+    requiresBuild: true
+    optionalDependencies:
+      '@xmldom/xmldom': 0.8.8
+    dev: false
 
   /expand-tilde@2.0.2:
     resolution: {integrity: sha512-A5EmesHW6rfnZ9ysHQjPdJRni0SRar0tjtG5MNtm9n5TUvsYU8oozprtRD4AqHxcZWWlVuAmQo2nWKfN9oyjTw==}
